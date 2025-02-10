@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Cac thanh phan co ban cua table
+    1. tr: hien thi hang
+    2. thead: phan dau
+        - tr_th
+    3. tbody: phan than
+        - tr-td
+    4. tfoot: phan cuoi cua bang
+    5. caption: mo ta tieu de cua bang
+    ****************
+    Cac thuoc tinh trong table
+    1. border: tao duong vien cho bang
+    2. cellpadding: khoang cach tu duong vien cua o den noi dung
+    3. cellspacing: khaong cach tu vien cua bang den vien cua o\
+    Thuoc tinh cua the td:
+    1. align: can chinh noi dung
+    2. bgcolor: mau nen cua o
+    -->
+    <table border="1" cellpadding="10" cellspacing="10">
+        <caption>Quan ly sinh vien</caption>
+        <thead>
+            <!--Dau bang-->
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Than bang-->
+            <tr>
+                <td align="center">1</td>
+                <td>Nguyễn Văn A</td>
+                <td rowspan="2">25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td bgcolor="red">Nguyễn Văn B</td>
+            </tr>
+            <tr>
+                <td align="right">3</td>
+                <td>Nguyễn Văn C</td>
+                <td>27</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!--Chan bang-->
+            <tr>
+                <td colspan="3">Tong so sinh vien: 3</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
