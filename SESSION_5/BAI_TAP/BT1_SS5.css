@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 45px;
+}
+.content{
+    text-align: center;
+    line-height: 50px;
+}
+.img{
+    text-align: center;
+}

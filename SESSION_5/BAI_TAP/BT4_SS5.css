@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.img{
+    height: 200px;
+}
+.container{
+    padding-bottom: 70px;
+    padding-left: 30px;
+}
+.content2{
+    opacity: 0.6;
+}
+.content3{
+    opacity: 0.6;
+}

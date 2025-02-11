@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content2{
+    border: 5px solid green;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.content1{
+    color: red;
+}
+.container{
+    background-color: #cccccc;
+    height: 170px;
+}
+.table{
+    background-color: white;
+    border-left: 5px solid green;
+    width: 1500px;
+}
+.content3{
+    color: darkred;
+}
+.content4{
+    color: blue;
+}
+.button{
+    height: 35px;
+    width: 130px;
+    background-color:seagreen;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}

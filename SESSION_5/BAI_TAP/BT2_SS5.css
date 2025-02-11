@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: black;
+}
+.title{
+    color: white;
+}
+.content{
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgreen ;
+    font-size: 14px;
+}
+.line{
+    color: aqua;
+}
+.img1{
+    width: 400px;
+    height: 300px;
+}
+.img2{
+    position: absolute;
+    top: 50px;
+    width: 400px;
+    height: 270px;
+}
+.img3{
+    width: 400px;
+    height: 200px;
+}
+.img4{
+    width: 400px;
+    height: 200px;
+}

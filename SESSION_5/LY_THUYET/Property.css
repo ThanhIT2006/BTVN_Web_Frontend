@@ -1,0 +1,23 @@
+/* Reset CSS
+    Đưa css về trạng thái mặc định */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+div{
+    position: absolute;
+    right: 120px;
+    background-color: cyan;
+    width: 500px;
+    height: 100px;
+    color: purple;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 1000;
+    border: 5px solid black ;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 80px;
+    letter-spacing: 5px;
+}

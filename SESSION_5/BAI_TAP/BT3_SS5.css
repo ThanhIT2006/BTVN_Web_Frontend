@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: 400px;
+}
+.title{
+    line-height: 70px;
+}
+.table{
+    text-align: center;
+    width: 1600px;
+    height: 250px;
+    border: 1px solid #a1a1a1;
+    border-collapse: collapse;
+}
+.table1{
+    background-color: blue;
+    color: white;
+    height: 50px;
+}
+.table2{
+    background-color: lightgray;
+}
+.table3{
+    background-color: white;
+}
