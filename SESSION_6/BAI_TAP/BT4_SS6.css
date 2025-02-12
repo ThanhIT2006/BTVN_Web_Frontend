@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+    background-color: rgb(36, 156, 11);
+    color: aliceblue;
+    height: 100px;
+    line-height: 2;
+
+}
+.main {
+    padding: 20px;
+    display: flex;
+}
+.title {
+    width: 400px;
+
+    border: 20px solid #33333300;
+    background-color: #F9F9F9;
+}   
+p{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px ;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.9;
+}
+p a{
+    color: rgb(0, 255, 34);
+}
+header a, aside a{
+    text-decoration: none;
+}
+.content {
+    width: 1000%;
+    padding: 10px;
+}
+.post{
+    background-color: white;
+    padding:80px;
+    margin-bottom: 1px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #E7E7E7;
+    text-align: left;
+    margin-right: 100px;
+}
+.post img {
+    max-width: 500px;
+    height: auto;
+}
