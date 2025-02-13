@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    border: 2px solid #E1E5E8;
+    width: 670px;
+    border-radius: 10px;
+    height: 290px;
+}
+.title1{
+    height: 50px;
+    line-height: 50px;
+}
+.title2{
+    height: 50px;
+    line-height: 50px;
+    background-color: #D0E2FF;
+}
+.title3{
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid  #E1E5E8;
+}
+
+.content{
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+span{
+    color: #D63384;
+}
+.up{
+    position: absolute;
+    top: 65px;
+    left: 640px;
+}
+.down{
+    position: absolute;
+    left: 640px;
+    top: 17px;
+}
+.down1{
+    position: absolute;
+    left: 640px;
+    top: 250px;
+}

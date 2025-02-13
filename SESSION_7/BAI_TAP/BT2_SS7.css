@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container1{
+    background-color: #F7F6F9;
+    height: 230px;
+    width: 430px;
+}
+.container2{
+    background-color: #F7F6F9;
+    height: 240px;
+    width: 1700px;
+}
+.component{
+    border: 1px solid #C3BFD3;
+    height: 180px;
+    width: 400px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.component1{
+    border: 1px solid #C3BFD3;
+    height: 180px;
+    width: 400px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-right: 10px ;
+}
+.component2{
+    border: 1px solid #C3BFD3;
+    height: 180px;
+    width: 400px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-right: 10px ;
+}
+.component3{
+    border: 2px solid #C3BFD3;
+    height: 180px;
+    width: 400px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-right: 10px ;
+}
+.component4{
+    border: 2px solid #C3BFD3;
+    height: 180px;
+    width: 400px;
+    text-align: center;
+    padding-top: 30px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+.title{
+    color: #BC2229;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+.content1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.note0{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top : 160px;
+    left: 130px;
+}
+.note{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top : 450px;
+    left: 150px;
+}
+.note1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top : 450px;
+    left: 550px ;
+}
+.note2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top : 450px;
+    left: 910px;
+}
+.note3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top : 450px;
+    left: 1275px;
+    width: 400px;
+}
