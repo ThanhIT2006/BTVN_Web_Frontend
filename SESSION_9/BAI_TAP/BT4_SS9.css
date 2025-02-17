@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+
+}
+.header{
+    background-color: #3498DB;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: white;
+    margin-bottom: 10px; 
+}
+.sidebar{
+    background-color: #2ECC71;
+    height: 300px;
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+}
+.content{
+    background-color: #E74C3C;
+    height: 300px;
+    flex-grow: 4;
+    padding: 10px;
+    color: white;
+}
+.footer{
+    background-color: #9B59B6;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+}
+.footer{
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: white;
+    margin-top: 10px;
+}
