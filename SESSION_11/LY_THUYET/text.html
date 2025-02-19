@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục hiển thị</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .header, .nav, .main, .sidebar, .footer {
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #b33;
+            color: white;
+        }
+        .header, .footer {
+            width: 100%;
+        }
+        .nav, .sidebar {
+            width: 25%;
+        }
+        .main {
+            width: 50%;
+        }
+        .nav, .main, .sidebar {
+            flex: 1;
+        }
+        @media (max-width: 600px) {
+            .nav, .main, .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="nav">Navigation</div>
+        <div class="main">Main Content</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

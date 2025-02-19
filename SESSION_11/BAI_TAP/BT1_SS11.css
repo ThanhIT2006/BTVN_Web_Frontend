@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    
+}
+.header{
+    background-color: #FE0100;
+    height: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-top: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.body{
+    display: flex;
+    justify-content: space-evenly;
+    height: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar1{
+    background-color: #008001;
+    width: 10%;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+.content{
+    background-color: #FFFF05;
+    width: 75%;
+    border-radius: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.sidebar2{
+    background-color: #FF68B3;
+    width: 10%;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+.footer{
+    background-color: #0000FE;
+    height: 100px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-top: 5px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+@media screen and (max-width:768px) {
+    .container{
+        height: 660px;
+        display: flex;
+        flex-direction: column;
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .sidebar1{
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+       
+        height: 70px;
+    }
+    .sidebar2{
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+       
+        height: 70px;
+    }
+    .content{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 12px;
+        width: auto;
+        
+        height: 250px;
+    }
+    .footer{
+        height: 70px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
