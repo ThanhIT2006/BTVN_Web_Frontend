@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.input{
+    width: 400px;
+    margin-top: 5px;
+}
+.form{
+    margin-left: 20px;
+}
+.sex{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.male{
+    margin-right: 5px;
+}
+.btn{
+    margin-left: 20px;
+}

@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.modal-title{
+    font-size: 30px;
+    width: 100%;
+
+}
+.modal-header{
+   
+    border: none;
+}
+.input{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./BT8_SS12.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body body">
+        <h5 class="card-title">Payment</h5>
+        <form>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+              <label class="form-check-label" for="creditCard">
+                Credit card
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="debitCard">
+              <label class="form-check-label" for="debitCard">
+                Debit card
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+              <label class="form-check-label" for="paypal">
+                PayPal
+              </label>
+            </div>
+          </div>
+          <div class="content">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <label for="nameOnCard">Name on card</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col">
+                  <label for="cardNumber">Credit card number</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </form>
+            <form>
+              <div class="row1">
+                <div class="col1">
+                  <label for="expiration">Expiration</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col1">
+                  <label for="cvv">CVV</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </form>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block button">Continue to checkout</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -24,7 +24,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid white;
 }
 .item{
     width: 100px;
@@ -135,5 +134,11 @@
     }
     .left{
         margin-left: 0px;
+    }
+    .item{
+        display: none;
+    }
+    .item1{
+        display: none;
     }
 }
