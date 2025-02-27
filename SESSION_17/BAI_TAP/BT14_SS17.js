@@ -1,0 +1,10 @@
+let radius=prompt("Nhập bán kính: ");
+let height=prompt("Nhập chiều cao: ");
+let surroundingArea=2*3.14*radius*height;
+let totalArea=surroundingArea+ 2*3.14*radius**2;
+let cylindricalVolume=3.14*radius**2*height;
+let bottomPerimeter=2*3.14*radius;
+document.write("Diện tích xung quanh là: "+surroundingArea.toFixed(2)+"<br>");
+document.write("Diện tích toàn phần là: "+totalArea.toFixed(2)+"<br>");
+document.write("Thể tích hình trụ là: "+cylindricalVolume.toFixed(2)+"<br>");
+document.write("Chu vi đáy là: "+bottomPerimeter.toFixed(2)+"<br>");
