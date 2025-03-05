@@ -20,7 +20,6 @@ else
 {
     console.log("Không hợp lệ!");
 }
-  /*   let n = prompt("Mời bạn nhập số fibonacci"); */
    
     
     
