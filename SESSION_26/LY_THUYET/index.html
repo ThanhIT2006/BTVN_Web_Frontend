@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Các hàm nâng cao trong js
+        LÀM VIỆC VỚI MẢNG
+        Method: Phương thức
+        property:thuộc tính
+        1.filter()
+        2.map()
+        3.foreach()
+        4.reduce()
+        5.find()
+        6.findindex()
+        7.some()
+        8.every()
+        9.indexof()
+        10.includes()
+        11.endswith()
+        12.startwith()
+
+        1.Đầu vào của phương thức nhận là gì
+        2.Đầu ra
+            Kết quả khi sử dụng phương thức
+         */
+        // filter: lọc,  sẽ tạo ra 1 mảng mới
+        /* 
+            Đầu vào nhận vào 1 hàm
+            Đầu ra trả về 1 mảng
+                +[chứa phần tử]
+                +[] mảng rỗng
+        */
+        let number = [2, 5, 75, 23, 8, 543, 76, 43, 867, 342];
+        // let result=number.filter(function sayhello(item, index, arr) {
+        //     /* console.log(item); */
+        //     /* console.log(index); */
+        //     /* console.log(arr); */
+        //     return item>5;
+        // })
+        let result=number.filter((item,index,arr)=>{
+            return item%17==0;
+        })
+        console.log(result);
+        
+
+    </script>
+</body>
+
+</html>

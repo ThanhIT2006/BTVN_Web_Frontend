@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* Phương thức reduce
+            Đầu vào:
+                1.Một hàm
+                2.Giá trị khởi tạo
+            thường dùng để tính toán các giá trị phần tử ở trong mảng
+        */
+        let number = [2, 4, 6, 8, 10, 23, 756, 123, 642, 675, 43, 35, 1];
+        let sum = 0;
+        for (let i = 0; i < number.length; i++) {
+            sum += number[i];
+        }
+        //acc: accumulator
+        let result = number.reduce((acc, item, arr) => {
+            return acc + item;
+        }, 0)
+        console.log(result);
+        
+    </script>
+</body>
+
+</html>
