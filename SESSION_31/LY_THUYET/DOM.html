@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Học DOM</h1>
+    <!-- 
+    DOM: document object model: mô hình tài liệu dạng đối tượng 
+    KHi trang web tải lên trình duyệt sẽ tạo ra một mô hình DOM
+    công dụng: 
+    JS: có thể:
+        + Thay đổi các phần tử(element) HTML
+        + Thay đổi các thuộc tính (attibute)
+        + Thay đổi các style trên trang
+        + Thay đổi nội dung của phần tử HTML...
+
+    Các thành phần chính trong DOM
+    1. DOCUMENT: phần tử to nhất trong cây DOM
+    2. ELEMENT: phần tử, tagname
+        Các cách lấy ELEMENT: 
+        1. Lấy theo tên thẻ
+            document.getElementByTagName()
+        2. Lấy theo class
+            document.getElementByClassName()
+        3. Lấy theo ID
+            document.getElementById()
+    3. ATTRiBUTE: thuộc tính
+    4. TEXT: nội dung của phần tử
+    -->
+    <script>
+        let element=document.getElementsByTagName("h1");
+        let student={
+            name:"NGỌC THANH",
+            say: function sayhello() {
+                console.log("Xin chào!");
+            }
+        }
+        student.say();
+    </script>
+</body>
+</html>
