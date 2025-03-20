@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar with Page Opacity</title>
+    <style>
+        body {
+            transition: opacity 0.3s ease;
+            opacity: 0.3; 
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .progress-bar-container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+            height: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: #4caf50;
+            transition: width 0.3s, opacity 0.3s;
+            opacity: 0.3;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Progress Bar with background Effect</h1>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="buttons">
+            <button id="increase">Tăng tiến trình</button>
+            <button id="decrease">Giảm tiến trình</button>
+        </div>
+    </div>
+    <script src="./BT9_SS32.js"></script>
+</body>
+</html>
