@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .input_password {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border-color: #888888;
+        }
+
+        #open {
+            position: absolute;
+            top: 20px;
+            left: 250px;
+        }
+
+        #close {
+            position: absolute;
+            top: 20px;
+            left: 250px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pass">
+        <input class="input_password" type="password" placeholder="Enter your password">
+    </div>
+    <i onclick="onclick1()" id="open" class="fa-solid fa-eye"></i>
+    <i onclick="onclick2()" id="close" class="fa-solid fa-eye-slash"></i>
+    <script src="./BT1_SS33.js"></script>
+</body>
+
+</html>
