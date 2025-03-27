@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            text-align: center;
+            background-color: #FAFAFA;
+            justify-content: center;
+            height: auto;
+            padding-top: 20px;
+        }
+
+        img {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        .content {
+            width: 340px;
+            display: flex;
+            padding: 10px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .tex {
+            text-align: left;
+            padding-top: 10px;
+            margin-left: 20px;
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #28A745;
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Bạn thích món nào nhất? 🍲</h2>
+        <div class="content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bun-Bo-Hue-from-Huong-Giang-2011.jpg/1200px-Bun-Bo-Hue-from-Huong-Giang-2011.jpg" alt="">
+            <div class="tex">
+                <p class="title">Bún bò Huế</p>
+                <p>❤️ <span id="count1">0</span> lượt thích</p>
+                <button onclick="addLike('count1')">Thích +1</button>
+            </div>
+        </div>
+        <div class="content">
+            <img src="https://fohlafood.vn/cdn/shop/articles/bi-quyet-nau-phi-bo-ngon-tuyet-dinh.jpg?v=1712213789" alt="">
+            <div class="tex">
+                <p class="title">Phở bò Hà Nội</p>
+                <p>❤️ <span id="count2">0</span> lượt thích</p>
+                <button onclick="addLike('count2')">Thích +1</button>
+            </div>
+        </div>
+        <div class="content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/C%C6%A1m_T%E1%BA%A5m%2C_Da_Nang%2C_Vietnam.jpg/640px-C%C6%A0m_T%E1%BA%A5m%2C_Da_Nang%2C_Vietnam.jpg" alt="">
+            <div class="tex">
+                <p class="title">Cơm tấm Sài Gòn</p>
+                <p>❤️ <span id="count3">0</span> lượt thích</p>
+                <button onclick="addLike('count3')">Thích +1</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let counts = JSON.parse(localStorage.getItem("counts")) || { count1: 0, count2: 0, count3: 0 };
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("count1").textContent = counts.count1;
+            document.getElementById("count2").textContent = counts.count2;
+            document.getElementById("count3").textContent = counts.count3;
+        });
+        function addLike(id) {
+            counts[id]++;
+            document.getElementById(id).textContent = counts[id];
+            localStorage.setItem("counts", JSON.stringify(counts));
+        }
+    </script>
+</body>
+
+</html>

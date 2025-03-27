@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .task-input {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        input[type='text'] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .board {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .column {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .column h3 {
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .task {
+            background-color: #ebebeb;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task p {
+            margin: 0 0 5px 0;
+        }
+
+        .task button {
+            padding: 5px 10px;
+            font-size: 13px;
+            background-color: #28a745;
+        }
+
+        .task button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>🗂️ Quản lý công việc (Task Board)</h2>
+
+    <div class="task-input">
+        <input type="text" id="taskName" placeholder="Nhập tên công việc..." />
+        <button onclick="add()">Thêm</button>
+    </div>
+
+    <div class="board">
+        <div class="column" id="pendingCol">
+            <h3>🕐 Chờ xử lý</h3>
+            <div id="pendingTasks">
+                <!-- <div class="task">
+            <p>Nội dung</p>
+            <button>Chuyển tiếp</button>
+          </div> -->
+            </div>
+        </div>
+        <div class="column" id="inProgressCol">
+            <h3>🔨 Đang làm</h3>
+            <div id="inProgressTasks"></div>
+        </div>
+        <div class="column" id="doneCol">
+            <h3>✅ Hoàn thành</h3>
+            <div id="doneTasks">
+                <!-- <div class="task">
+            <p>Nội dung</p>
+          </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let taskNameInput = document.getElementById("taskName");
+            let pendingTasks = document.getElementById("pendingTasks");
+            let inProgressTasks = document.getElementById("inProgressTasks");
+            let doneTasks = document.getElementById("doneTasks");
+
+            function loadTasks() {
+                let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+                tasks.forEach(task => createTaskElement(task));
+            }
+
+            function saveTask(name, status) {
+                let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+                tasks.push({ name, status });
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+            }
+
+            function updateTaskStatus(taskName, newStatus) {
+                let tasks = JSON.parse(localStorage.getItem("tasks"));
+                let updatedTasks = tasks.map(task =>
+                    task.name === taskName ? { ...task, status: newStatus } : task
+                );
+                localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+            }
+
+            function createTaskElement(task) {
+                let taskDiv = document.createElement("div");
+                taskDiv.className = "task";
+                let taskContent = document.createElement("p");
+                taskContent.textContent = task.name;
+                let actionButton = document.createElement("button");
+
+                actionButton.textContent = task.status === "pending" ? "Chuyển tiếp" : "Hoàn thành";
+                actionButton.onclick = () => {
+                    taskDiv.remove();
+                    let newStatus = task.status === "pending" ? "inProgress" : "done";
+                    updateTaskStatus(task.name, newStatus);
+                    let targetColumn = newStatus === "inProgress" ? inProgressTasks : doneTasks;
+                    createTaskElement({ name: task.name, status: newStatus });
+                };
+                taskDiv.appendChild(taskContent);
+                taskDiv.appendChild(actionButton);
+
+                let targetColumn =
+                    task.status === "pending" ? pendingTasks :
+                        task.status === "inProgress" ? inProgressTasks : doneTasks;
+
+                targetColumn.appendChild(taskDiv);
+            }
+
+            function addTask() {
+                let taskName = taskNameInput.value.trim();
+                if (taskName) {
+                    let task = { name: taskName, status: "pending" };
+                    createTaskElement(task);
+                    saveTask(task.name, task.status);
+                    taskNameInput.value = "";
+                }
+            }
+
+            document.querySelector("button").onclick = addTask;
+            loadTasks();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .all {
+            background-color: #F4F6F8;
+            padding-top: 30px;
+            padding-left: 50px;
+            padding-bottom: 30px;
+            width: 410px;
+        }
+
+        .container {
+            border: 1px solid;
+            width: 350px;
+            height: 200px;
+            text-align: center;
+            background-color: white;
+            padding-top: 20px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .title {
+            padding-bottom: 30px;
+        }
+
+        .name {
+            height: 25px;
+            width: 200px;
+            border-radius: 5px;
+            border-color: gray;
+            margin-right: 10px;
+
+        }
+
+        button {
+            height: 30px;
+            width: 50px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .rename{
+            margin-top: 20px;
+        }
+        #text{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="container">
+            <h2 class="title">Nhập tên của bạn</h2>
+            <input id="name" type="text" class="name">
+            <button onclick="saveName()">Lưu</button>
+            <h2 id="text">👋 Chào bạn</h2>
+            <button class="rename" onclick="changeName()">Đổi tên</button>
+        </div>
+    </div>
+    <script>
+        function saveName() {
+            let name = document.getElementById("name").value.trim();
+            if (!name) {
+                alert("Vui lòng nhập tên của bạn.");
+                return;
+            }
+            localStorage.setItem("name", name);
+            document.getElementById("text").textContent = "👋 Chào bạn, " + name;
+            document.getElementById("name").value = "";
+        }
+        function showGreeting() {
+            let name = localStorage.getItem("name");
+            if (name) {
+                document.getElementById("text").textContent = "👋 Chào bạn, " + name;
+            }
+        }
+        function changeName() {
+            let name = localStorage.getItem("name");
+            if (name) {
+                document.getElementById("name").value = name;
+            }
+        }
+        document.addEventListener("DOMContentLoaded", showGreeting);
+    </script>
+</body>
+
+</html>

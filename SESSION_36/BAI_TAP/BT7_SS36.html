@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .link {
+            margin-top: 15px;
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Đăng ký</h2>
+        <input id="username" type="text" placeholder="Tên đăng nhập" />
+        <input id="password" type="password" placeholder="Mật khẩu" />
+        <button onclick="register()">Đăng ký</button>
+        <p id="error-message" class="error"></p>
+        <a href="LoginBT7.html" class="link">Quay lại đăng nhập</a>
+    </div>
+
+    <script>
+        function register() {
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let errorMessage = document.getElementById("error-message");
+            if (!username || !password) {
+                errorMessage.textContent = "Vui lòng nhập đầy đủ thông tin.";
+                return;
+            }
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            let isDuplicate = users.some(user => user.username === username);
+            if (isDuplicate) {
+                errorMessage.textContent = "Tên đăng nhập đã tồn tại.";
+                return;
+            }
+            users.push({ username, password });
+            localStorage.setItem("users", JSON.stringify(users));
+            alert("Đăng ký thành công!");
+            window.location.href = "LoginBT7.html";
+        }
+    </script>
+</body>
+
+</html>

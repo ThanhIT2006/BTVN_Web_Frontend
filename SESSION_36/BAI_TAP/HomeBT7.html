@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f6f8;
+            text-align: center;
+        }
+
+        .home-container {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        h2 span {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-container">
+        <h2>Xin chào, <span id="username"></span>! 👋</h2>
+        <p>Chào mừng bạn đến với hệ thống mini!</p>
+        <button onclick="logout()">Đăng xuất</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = localStorage.getItem("username");
+            if (username) {
+                document.getElementById("username").textContent = username;
+            } else {
+                alert("Bạn chưa đăng nhập!");
+                window.location.href = "LoginBT7.html"; 
+            }
+        });
+        function logout() {
+            localStorage.removeItem("username");
+            alert("Đăng xuất thành công!");
+            window.location.href = "LoginBT7.html"; 
+        }
+    </script>
+</body>
+
+</html>

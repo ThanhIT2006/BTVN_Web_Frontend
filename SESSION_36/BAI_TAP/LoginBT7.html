@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f6f8;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .remember-me input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            accent-color: #007bff;
+        }
+
+        .remember-me label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .link {
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Đăng nhập</h2>
+        <input id="username" type="text" placeholder="Tên đăng nhập" />
+        <input id="password" type="password" placeholder="Mật khẩu" />
+        <div class="remember-me">
+            <label><input id="remember-me" type="checkbox"> Ghi nhớ tôi</label>
+        </div>
+        <button onclick="login()">Đăng nhập</button>
+        <p id="error-message" style="color:red;"></p>
+        <a href="BT7_SS36.html" class="link">Chưa có tài khoản? Đăng ký</a>
+    </div>
+    <script>
+        function login() {
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let rememberMe = document.getElementById("remember-me").checked;
+            let errorMessage = document.getElementById("error-message");
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            let user = users.find(user => user.username === username && user.password === password);
+            if (user) {
+                alert("Đăng nhập thành công!");
+                localStorage.setItem("username", username);
+                if (rememberMe) {
+                    localStorage.setItem("rememberedUsername", username);
+                } else {
+                    localStorage.removeItem("rememberedUsername");
+                }
+                window.location.href = "HomeBT7.html";
+            } else {
+                errorMessage.textContent = "Tên đăng nhập hoặc mật khẩu không đúng.";
+            }
+        }
+    </script>
+</body>
+
+</html>
